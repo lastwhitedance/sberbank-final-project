@@ -25,6 +25,7 @@ export const SignUpPage = () => {
 
   const submitHandler = async values => {
     const response = await mutateAsync(values);
+    console.log(response);
     navigate(`/products`);
   };
 
