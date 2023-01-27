@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease-out;
 }
 
 html {
@@ -12,4 +13,17 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #f3f4f7;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.main__inner {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
 }

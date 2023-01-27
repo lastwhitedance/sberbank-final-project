@@ -1,0 +1,20 @@
+.header {
+  background-color: #323b43;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.nav__link {
+  color: #fff;
+}
+
+.nav__link:hover {
+  color: #fd5c63;
+  text-decoration: none;
+}
