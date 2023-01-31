@@ -16,9 +16,14 @@ body {
   background-color: #f3f4f7;
 }
 
+img {
+  width: 100%;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .main__inner {
