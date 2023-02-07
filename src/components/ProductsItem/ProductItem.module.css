@@ -1,0 +1,35 @@
+.card {
+  flex: 0 1 calc(25% - 1em);
+  background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
+
+  border-radius: 0.5rem;
+}
+
+.card__inner {
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px 1fr 1fr;
+  padding: 1rem;
+}
+
+.card__title {
+  font-weight: bold;
+}
+
+.card__pictures {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card__price,
+.card__discount,
+.card__stock {
+  display: flex;
+  justify-content: space-between;
+}

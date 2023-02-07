@@ -1,5 +1,19 @@
 .header {
-  background-color: #323b43;
+  background-color: #fff;
+  /*background-color: #323b43;*/
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px;
+}
+
+.logo {
+  color: inherit;
+  font-size: 2rem;
+  text-decoration: none;
 }
 
 .nav__list {
@@ -11,10 +25,19 @@
 }
 
 .nav__link {
-  color: #fff;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.nav__link:hover {
-  color: #fd5c63;
-  text-decoration: none;
-}
+/*.nav__link {*/
+/*  color: #fff;*/
+/*}*/
+
+/*.nav__link:hover {*/
+/*  color: #fd5c63;*/
+/*  text-decoration: none;*/
+/*}*/
