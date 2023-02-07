@@ -25,7 +25,7 @@ export const ProductsPage = () => {
     if (!token) {
       navigate("/signin");
     }
-  }, [token]);
+  }, [navigate, token]);
 
   const { data, isError, error, isLoading } = useQuery({
     queryKey: ["productsList"],
