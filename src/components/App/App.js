@@ -4,14 +4,14 @@ import { Header } from "../Header/Header";
 
 export const App = () => {
   return (
-    <>
+    <div className="wrapper">
       <Header />
-      <div className="container">
-        <div className="main__inner">
+      <main className="main">
+        <div className="container">
           <Outlet />
         </div>
-      </div>
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };

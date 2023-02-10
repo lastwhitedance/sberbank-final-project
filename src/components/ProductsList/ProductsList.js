@@ -1,5 +1,5 @@
 import { ProductsItem } from "../ProductsItem/ProductsItem";
-import styles from './ProductsList.module.css'
+import styles from "./ProductsList.module.css";
 export const ProductsList = ({ data }) => {
   return (
     <div className={styles.cards}>

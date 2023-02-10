@@ -9,6 +9,7 @@ import { MainPage } from "./pages/MainPage";
 import { SignUpForm } from "./components/SignUpForm/SignUpForm";
 import { SignInForm } from "./components/SignInForm/SignInForm";
 import { ProductsPage } from "./pages/ProductsPage";
+import { CartPage } from "./pages/CartPage";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <ProductsPage />,
+      },
+      {
+        path: "cart",
+        element: <CartPage />,
       },
       {
         path: "signup",

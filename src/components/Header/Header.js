@@ -6,58 +6,46 @@ import {
   faList,
   faRightFromBracket,
   faCartShopping,
+  faRightToBracket,
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./Header.module.css";
+import { Search } from "../Search/Search";
 
 export const Header = () => {
   const { token } = useContext(AppContext);
   return (
     <header className={styles.header}>
-      <div className="container">
-        <div className={styles.header__inner}>
-          <Link className={styles.logo} to="/">
-            ૮₍ • ᴥ • ₎ა
-          </Link>
-          <form action="">
-            <input type="text" />
-          </form>
-          <ul className={styles.nav__list}>
+      <div className={styles.header__inner}>
+        <Link className={styles.logo} to="/">
+          DOG<span>Food</span>
+        </Link>
+        <Search />
+        <ul className={styles.nav__list}>
+          <li>
+            <NavLink className={styles.nav__link} to="/products">
+              <FontAwesomeIcon icon={faList} />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className={styles.nav__link} to="/cart">
+              <FontAwesomeIcon icon={faCartShopping} />
+            </NavLink>
+          </li>
+          {token ? (
             <li>
-              <NavLink className={styles.nav__link} to="/products">
-                <FontAwesomeIcon icon={faList} />
-                Продукты
+              <NavLink className={styles.nav__link} to="/singout">
+                <FontAwesomeIcon icon={faRightFromBracket} />
               </NavLink>
             </li>
+          ) : (
             <li>
-              <NavLink className={styles.nav__link} to="/cart">
-                <FontAwesomeIcon icon={faCartShopping} />
-                Корзина
+              <NavLink className={styles.nav__link} to="/signin">
+                <FontAwesomeIcon icon={faRightToBracket} />
               </NavLink>
             </li>
-            {token ? (
-              <li>
-                <NavLink className={styles.nav__link} to="/signin">
-                  <FontAwesomeIcon icon={faRightFromBracket} />
-                  Выйти
-                </NavLink>
-              </li>
-            ) : (
-              <>
-                <li>
-                  <NavLink className={styles.nav__link} to="/signup">
-                    Регистрация
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className={styles.nav__link} to="/signin">
-                    Войти
-                  </NavLink>
-                </li>
-              </>
-            )}
-          </ul>
-        </div>
+          )}
+        </ul>
       </div>
     </header>
   );

@@ -1,35 +1,50 @@
 .card {
-  flex: 0 1 calc(25% - 1em);
-  background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 16%);
-
+  flex: 0 1 calc(25% - 1.25rem);
   border-radius: 0.5rem;
+  border: 0.25rem solid #eff3f6;
 }
 
 .card__inner {
-  grid-gap: 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 200px 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 1rem;
-}
-
-.card__title {
-  font-weight: bold;
+  min-height: 100%;
+  border-radius: 0.5rem;
 }
 
 .card__pictures {
-  display: block;
-  width: 100%;
-  height: 100%;
   max-height: 240px;
   object-fit: cover;
   overflow: hidden;
 }
 
-.card__price,
-.card__discount,
-.card__stock {
+.card__title {
+  flex-grow: 1;
+}
+
+.card__description {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.card__price {
+  font-weight: bold;
+}
+
+.card__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ced7df;
+  border-radius: 0.5rem;
+  color: #59626a;
+  cursor: pointer;
+}
+
+.card__cart:hover {
+  background-color: #eff3f6;
 }

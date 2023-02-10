@@ -1,5 +1,6 @@
 import styles from "./ProductItem.module.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 export const ProductsItem = ({ product }) => {
   return (
     <div key={product.id} className={styles.card}>
@@ -10,16 +11,11 @@ export const ProductsItem = ({ product }) => {
           alt={product.name}
         />
         <div className={styles.card__title}>{product.name}</div>
-        <div className={styles.card__desc}>
-          <div className={styles.card__price}>
-            <span>Цена:</span> {product.price} ₽
-          </div>
-          <div className={styles.card__discount}>
-            <span>Скидка:</span> {product.discount} %
-          </div>
-          <div className={styles.card__stock}>
-            <span>Количество:</span> {product.stock} шт.
-          </div>
+        <div className={styles.card__description}>
+          <div className={styles.card__price}>{product.price} ₽</div>
+          <button className={styles.card__cart}>
+            <FontAwesomeIcon icon={faCartShopping} />
+          </button>
         </div>
       </div>
     </div>
