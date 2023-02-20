@@ -3,20 +3,20 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContextProvider";
 import { useQuery } from "@tanstack/react-query";
 import { productsApi } from "../api/Api";
-import CartList from "../components/CartList/CartList";
+import Product from "../components/Product/Product";
 
-export const CartPageInner = ({ data }) => {
+const SingleProductPageInner = ({ data }) => {
   return (
     <div>
-      <h1 className="title">Корзина</h1>
-      <CartList data={data} />
+      <div>SingleProductPage</div>
+      <Product data={data} />
     </div>
   );
 };
 
-const CartPageWithQuery = withQuery(CartPageInner);
+const SingleProductPageWithQuery = withQuery(SingleProductPageInner);
 
-export const CartPage = () => {
+export const SingleProductPage = () => {
   const { token } = useContext(AppContext);
 
   const { data, isError, error, isLoading } = useQuery({
@@ -26,7 +26,7 @@ export const CartPage = () => {
   });
 
   return (
-    <CartPageWithQuery
+    <SingleProductPageWithQuery
       data={data}
       isError={isError}
       error={error}
