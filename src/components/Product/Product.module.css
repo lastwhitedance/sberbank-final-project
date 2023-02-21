@@ -1,0 +1,25 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card h1 {
+    margin: 1rem 0;
+}
+
+.card__inner {
+  display: flex;
+  border-radius: 0.75rem;
+  border: 0.5rem solid #eff3f6;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.card__inner img {
+  display: block;
+  width: 12rem;
+  border-radius: 0.75rem;
+}

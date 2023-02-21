@@ -4,24 +4,21 @@ import { AppContext } from "../context/AppContextProvider";
 import { useQuery } from "@tanstack/react-query";
 import { productsApi } from "../api/Api";
 import Product from "../components/Product/Product";
+import { useParams } from "react-router-dom";
 
 const SingleProductPageInner = ({ data }) => {
-  return (
-    <div>
-      <div>SingleProductPage</div>
-      <Product data={data} />
-    </div>
-  );
+  return <Product data={data} />;
 };
 
 const SingleProductPageWithQuery = withQuery(SingleProductPageInner);
 
 export const SingleProductPage = () => {
   const { token } = useContext(AppContext);
+  const { id } = useParams();
 
   const { data, isError, error, isLoading } = useQuery({
-    queryKey: ["productsList"],
-    queryFn: () => productsApi.getAllProducts(),
+    queryKey: ["singleProduct"],
+    queryFn: () => productsApi.getProductById(id),
     enabled: token !== undefined,
   });
 

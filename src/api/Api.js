@@ -68,7 +68,15 @@ class Api {
     return res.json();
   }
 
-  async getProductById() {}
+  async getProductById(id) {
+    this.checkToken();
+    const res = await fetch(`${this.baseUrl}/products/${id}`, {
+      headers: {
+        authorization: this.getAuthorizationHeader(),
+      },
+    });
+    return res.json();
+  }
 
   async getProductsByIds() {}
 }
